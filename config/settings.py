@@ -93,7 +93,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                # 'django.template.context_processors.i18n',
+                "django.template.context_processors.i18n",  # Descomentado para soporte i18n en plantillas
                 # 'django.template.context_processors.media',
                 # 'django.template.context_processors.static',
                 # 'django.template.context_processors.tz',
@@ -148,13 +148,13 @@ LANGUAGES = (
     ("en", gettext("English")),
     ("fr", gettext("French")),
     ("es", gettext("Spanish")),
-    ("ru", gettext("Russia")),
+    ("ru", gettext("Russian")),
 )
 
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 
@@ -269,12 +269,3 @@ SEMESTER_CHOICES = (
     (SECOND, _("Second")),
     (THIRD, _("Third")),
 )
-LANGUAGE_CODE = 'es'  # Español por defecto
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True  # Si no está, agrégalo para zonas horarias
-LANGUAGES = [
-    ('en', 'English'),
-    ('es', 'Español'),
-]
-LOCALE_PATHS = [BASE_DIR / 'locale']  # Ruta para archivos de traducción

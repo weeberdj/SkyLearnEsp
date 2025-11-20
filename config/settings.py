@@ -269,3 +269,12 @@ SEMESTER_CHOICES = (
     (SECOND, _("Second")),
     (THIRD, _("Third")),
 )
+LANGUAGE_CODE = 'es'  # Español por defecto
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True  # Si no está, agrégalo para zonas horarias
+LANGUAGES = [
+    ('en', 'English'),
+    ('es', 'Español'),
+]
+LOCALE_PATHS = [BASE_DIR / 'locale']  # Ruta para archivos de traducción
